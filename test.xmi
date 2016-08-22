@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.0" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
+   <xmi:Documentation exporter="StarUML" exporterVersion="2.0"/>
+   <uml:Model xmi:id="AAAAAAFWsYhp9gDNybM=" xmi:type="uml:Model" name="RootModel">
+      <packagedElement xmi:id="AAAAAAFF+qBWK6M3Z8Y=" name="Model" visibility="public" xmi:type="uml:Model">
+         <packagedElement xmi:id="AAAAAAFWnd0kKzaZgo0=" name="AAA" visibility="public" isAbstract="true" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+            <ownedAttribute xmi:id="AAAAAAFWnd2bWDbQg8E=" name="age" visibility="protected" isStatic="false" isLeaf="false" type="int_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+            <ownedAttribute xmi:id="AAAAAAFWsWLcAACyI7o=" name="isNumber" visibility="private" isStatic="false" isLeaf="false" type="boolean_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+            <ownedOperation xmi:id="AAAAAAFWnd01hTbDrHo=" name="add" visibility="private" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+               <ownedParameter xmi:id="AAAAAAFWnd2ArzbKjM4=" name="a" visibility="public" isStatic="false" isLeaf="false" type="int_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="in" xmi:type="uml:Parameter"/>
+               <ownedParameter xmi:id="AAAAAAFWnd2ArzbLf9E=" name="b" visibility="public" isStatic="false" isLeaf="false" type="int_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="in" xmi:type="uml:Parameter"/>
+               <ownedParameter xmi:id="AAAAAAFWnd2ArzbMjHM=" visibility="public" isStatic="false" isLeaf="false" type="int_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="return" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="AAAAAAFWo+oBo84pMf0=" name="print" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+               <ownedParameter xmi:id="AAAAAAFWo+o7Gc4wT0I=" name="str" visibility="public" isStatic="false" isLeaf="false" type="String_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="in" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="AAAAAAFWsTbUNQCImOk=" name="AAA" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+               <xmi:Extension extender="StarUML">
+                  <stereotype value="constructor"/>
+               </xmi:Extension>
+            </ownedOperation>
+            <ownedOperation xmi:id="AAAAAAFWsTc2QACPuks=" name="AAA" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+               <xmi:Extension extender="StarUML">
+                  <stereotype value="constructor"/>
+               </xmi:Extension>
+               <ownedParameter xmi:id="AAAAAAFWsTdazwCW6Wo=" name="age" visibility="public" isStatic="false" isLeaf="false" type="int_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="in" xmi:type="uml:Parameter"/>
+               <ownedParameter xmi:id="AAAAAAFWsWV+ogC9iBc=" name="isNumber" visibility="public" isStatic="false" isLeaf="false" type="boolean_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="in" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="AAAAAAFWsYfyhgDFWGU=" name="helloworld" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="true" xmi:type="uml:Operation"/>
+            <interfaceRealization xmi:id="AAAAAAFWo3cNNc340Uw=" visibility="public" xmi:type="uml:InterfaceRealization" implementingClassifier="AAAAAAFWnd0kKzaZgo0=" contract="AAAAAAFWo3cM7M3Pt+4="/>
+         </packagedElement>
+         <packagedElement xmi:id="AAAAAAFWo3cM7M3Pt+4=" name="BBB" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Interface">
+            <ownedOperation xmi:id="AAAAAAFWo3c4sM4MM/E=" name="subtract" visibility="protected" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+               <ownedParameter xmi:id="AAAAAAFWo3eMUM4T/s4=" name="c" visibility="public" isStatic="false" isLeaf="false" type="Int_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="in" xmi:type="uml:Parameter"/>
+               <ownedParameter xmi:id="AAAAAAFWo3eMUM4U77I=" name="d" visibility="public" isStatic="false" isLeaf="false" type="int_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="in" xmi:type="uml:Parameter"/>
+               <ownedParameter xmi:id="AAAAAAFWo3eMUM4Vd30=" visibility="public" isStatic="false" isLeaf="false" type="int_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="return" xmi:type="uml:Parameter"/>
+            </ownedOperation>
+         </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:id="int_id" xmi:type="uml:DataType" name="int"/>
+      <packagedElement xmi:id="String_id" xmi:type="uml:DataType" name="String"/>
+      <packagedElement xmi:id="Int_id" xmi:type="uml:DataType" name="Int"/>
+      <packagedElement xmi:id="boolean_id" xmi:type="uml:DataType" name="boolean"/>
+   </uml:Model>
+</xmi:XMI>
