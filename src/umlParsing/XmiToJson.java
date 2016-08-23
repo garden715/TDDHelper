@@ -1,4 +1,5 @@
 package umlParsing;
+
 import java.io.File;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -15,6 +16,9 @@ public class XmiToJson {
 	JSONObject obj = new JSONObject();
 
 	public static void main(String argv[]) {
+		JSONArray classUnits = new JSONArray();
+		JSONArray interfaceUnits = new JSONArray();
+		JSONObject totalClassOrInterface = new JSONObject();
 		try {
 			File file = new File("test.xmi");
 			DocumentBuilderFactory docBuildFact = DocumentBuilderFactory.newInstance();
@@ -31,21 +35,20 @@ public class XmiToJson {
 				switch (e.getAttribute("xmi:type")) {
 
 				case "uml:Class":
-					JSONObject classObject = new JSONObject();
-
-					classObject.put("ClassUnit", procedure(e));
-					System.out.println(classObject);
+					classUnits.add(procedure(e));
 					break;
 				case "uml:Interface":
-					JSONObject interfaceObject = new JSONObject();
-
-					interfaceObject.put("InterfaceUnit", procedure(e));
-					System.out.println(interfaceObject);
+					interfaceUnits.add(procedure(e));
 					break;
 				}
 			}
+			totalClassOrInterface.put("ClassUnit", classUnits);
+			totalClassOrInterface.put("InterfaceUnit", interfaceUnits);
+
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+		System.out.println(totalClassOrInterface);
 		}
 	}
 
@@ -65,7 +68,7 @@ public class XmiToJson {
 			Element ae = (Element) an;
 			if (ae.getAttribute("xmi:type").equals("uml:Property")) {
 				attributeObject.put("name", ae.getAttribute("name"));
-				
+
 				/*
 				 * * export : ExportKind [ public, private, protected, final,
 				 * unknown ]
